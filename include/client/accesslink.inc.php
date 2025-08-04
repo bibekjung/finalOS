@@ -11,9 +11,9 @@ else
 ?>
 
 <!-- Centering wrapper -->
-<div style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+<div style="display: flex; justify-content: center; align-items: center; min-height: 75vh;">
     <form action="login.php" method="post" id="clientLogin"
-        style="width: 100%; max-width: 500px; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+        style="width: 100%; max-width: 500px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
 
         <?php csrf_token(); ?>
 

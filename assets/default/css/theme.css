@@ -356,7 +356,7 @@ background-color: #ffffff;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  /* background: linear-gradient(to right, #ffffff, #f5f7fa); */
+  background: linear-gradient(to right, #3777A9, #fffffe,  #3777A9);
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
   position: relative;
