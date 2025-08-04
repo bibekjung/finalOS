@@ -171,19 +171,19 @@ foreach (Topic::getHelpTopics(true) as $id=>$name) {
 
 
 <h1 style="margin:10px 0">
-    <a href="<?php echo Http::refresh_url(); ?>"
+    <!-- <a href="<?php echo Http::refresh_url(); ?>"
         ><i class="refresh icon-refresh"></i>
     <?php echo __('Tickets'); ?>
-    </a>
+    </a> -->
 
 <div class="pull-right states">
     <small>
 <?php if ($openTickets) { ?>
-    <i class="icon-file-alt"></i>
-    <a class="state <?php if ($status == 'open') echo 'active'; ?>"
+    <!-- <i class="icon-file-alt"></i> -->
+    <!-- <a class="state <?php if ($status == 'open') echo 'active'; ?>"
         href="?<?php echo Http::build_query(array('a' => 'search', 'status' => 'open')); ?>">
-    <?php echo __('Open'); if ($openTickets > 0) echo sprintf(' (%d)', $openTickets); ?>
-    </a>
+    <?php echo __('Open '); if ($openTickets > 0) echo sprintf(' (%d)', $openTickets); ?>
+    </a> -->
     <?php if ($closedTickets) { ?>
     &nbsp;
     <span style="color:lightgray">|</span>
@@ -269,8 +269,12 @@ if ($closedTickets) {?>
     ?>
     </tbody>
 </table>
+
+<div class="pagination">
+  
 <?php
 if ($total) {
     echo '<div>&nbsp;'.__('Page').':'.$pageNav->getPageLinks().'&nbsp;</div>';
 }
 ?>
+</div>
