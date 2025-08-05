@@ -30,7 +30,8 @@ html, body {
 
 /* Modern Header */
 #header {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  /* background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); */
+  background-color: white;
   color: white;
   padding: 0;
   height: auto;
@@ -50,6 +51,7 @@ html, body {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  /* background: #3777A9; */
   z-index: 1;
 }
 
@@ -400,28 +402,50 @@ table {
   border-spacing: 0;
   width: 100%;
   margin: 20px 0;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   background: #fff;
 }
 
-th {
-  background: linear-gradient(135deg, #586d96 0%, #3777A9 100%);
+table .headline{
+  background-color: #567892;
   color: white;
+  font-size: 14px;
+}
+
+/* .infoTable th {
+  background-color: yellow;
+} */
+
+th {
+  /* background: linear-gradient(135deg, #586d96 0%, #3777A9 100%); */
+  color: rgb(0, 0, 0);
   padding: 20px 25px;
-  text-align: left;
+  text-align: center;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-top: 50px;
 }
+
+
 
 td {
   padding: 20px 25px;
   border-bottom: 1px solid #f0f0f0;
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1;
+}
+
+
+
+
+
+
+td.headling{
+  background-color: red;
 }
 
 tr:hover {
