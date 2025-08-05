@@ -37,6 +37,7 @@ if (osTicket::is_ie())
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/osticket.css?53339df" media="screen"/>
     <link rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/theme.css?53339df" media="screen"/>
+    <link rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/modern-theme.css?53339df" media="screen"/>
     <link rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/print.css?53339df" media="print"/>
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/typeahead.css?53339df"
          media="screen" />
@@ -62,6 +63,7 @@ if (osTicket::is_ie())
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/redactor-plugins.js?53339df"></script>
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/redactor-osticket.js?53339df"></script>
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/select2.min.js?53339df"></script>
+    <script type="text/javascript" src="<?php echo ASSETS_PATH; ?>js/modern-theme.js?53339df"></script>
     <?php
     if($ost && ($headers=$ost->getExtraHeaders())) {
         echo "\n\t".implode("\n\t", $headers)."\n";

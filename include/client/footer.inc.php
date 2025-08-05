@@ -1,12 +1,15 @@
         </div>
     </div>
     <div id="footer">
-        <p><?php echo __('Copyright &copy;'); ?> <?php echo date('Y'); ?>
-       
-        
-        <?php echo __('Credit Information Bureau.'); ?>
-        - <?php echo __('All rights reserved.'); ?></p>
-        <!-- <a id="poweredBy" href="https://osticket.com" target="_blank"><?php echo __('Helpdesk software - powered by osTicket'); ?></a> -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>&copy; <?php echo date('Y'); ?> <?php echo __('Credit Information Bureau.'); ?></p>
+                <p><?php echo __('All rights reserved.'); ?></p>
+            </div>
+            <div class="footer-section">
+                <p><?php echo __('Need Help?'); ?> <a href="<?php echo ROOT_PATH; ?>kb/"><?php echo __('Knowledge Base'); ?></a></p>
+            </div>
+        </div>
     </div>
 <div id="overlay"></div>
 <div id="loading">
