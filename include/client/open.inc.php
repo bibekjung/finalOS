@@ -31,10 +31,10 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
 }
 
 ?>
-<div style="width: 100%; max-width: 700px;  min-height: 610px;  margin: 8px auto; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;">
+<div style="width: 100%; max-width: 700px;  min-height: 500px;  margin: 8px auto; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;">
 
   <h1 style="font-size: 24px; margin-bottom: 10px; color: #2c3e50; text-align: center; font-weight: 600;">
-    <?php echo __('Open a New Ticket'); ?>
+    <?php echo __('Open a New Ticket here'); ?>
   </h1>
 
   <p style="font-size: 15px; margin-bottom: 4px; color: #7f8c8d; text-align: center; line-height: 1;">
@@ -44,8 +44,8 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
 <form id="ticketForm" method="post" action="open.php" enctype="multipart/form-data" style="margin-top: 15px;">
   <?php csrf_token(); ?>
   <input type="hidden" name="a" value="open">
-  <table width="100%" cellpadding="10" cellspacing="0" border="0" style="border-collapse: collapse;">
-    <tbody>
+  <table id ='tableLogin' width="100%" cellpadding="10" cellspacing="0" border="0" style="border-collapse: collapse;">
+    <tbody id = "tableBody">
 
 
 <?php

@@ -315,8 +315,8 @@ select {
   background: #fff;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+  min-height: 200px; /* adjust as needed */
 }
 
 #ticketForm div {
@@ -344,12 +344,110 @@ select {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#tableLogin {
+  width: 100%;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#tableLogin th,
+#tableLogin td {
+  padding: 10px 15px;
+  /* border: 1px solid #ba0000; */
+  vertical-align: top;
+  text-align: left;
+}
+
+#tableLogin input,
+#tableLogin textarea,
+#tableLogin select {
+  width: 80%;
+  padding: 8px 10px;
+  font-size: 15px;
+  /* border: 1px solid #ccc; */
+  border-radius: 9px;
+  /* background-color: #5f2929; */
+}
+
+/* #tableLogin textarea {
+  resize: vertical;
+} */
+
+/* #tableLogin button {
+  padding: 10px 20px;
+  background-color: #5f8394;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+#tableLogin button:hover {
+  background-color: #476673;
+}
+
+#tableLogin span {
+  display: inline-block;
+  padding: 12px 12px;
+  /* border: 1px solid #e71c1c; */
+  border-radius: 8px;
+  /* background-color: #fff; */
+}
+/* 
+/* Table container */
+#tableBody {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Header cells */
+#tableBody th {
+  background-color: #f1f3f5;
+  font-weight: bold;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Body cells */
+#tableBody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eaeaea;
+  vertical-align: top;
+}
+
+/* Span inside table body */
+#tableBody span {
+  display: inline-block;
+  /* background-color: #1b5ea1; */
+  color: #000000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Optional: hover row effect */
+#tableBody tr:hover {
+  background-color: #f8f9fa;
+}
+
+
 #ticketForm div input:focus,
 #ticketForm div textarea:focus,
 #ticketForm div select:focus {
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+  /* box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1); */
+  /* transform: translateY(-2px); */
   outline: none;
 }
 
