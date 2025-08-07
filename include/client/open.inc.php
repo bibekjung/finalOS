@@ -31,7 +31,7 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
 }
 
 ?>
-<div style="width: 100%; max-width: 700px;  min-height: 500px;  margin: 8px auto; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;">
+<div style="width: 100%; max-width: 700px;  min-height: 400px;  margin: 5px auto;background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;">
 
   <h1 style="font-size: 24px; margin-bottom: 10px; color: #2c3e50; text-align: center; font-weight: 600;">
     <?php echo __('Open a New Ticket here'); ?>
@@ -52,7 +52,48 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
         if (!$thisclient) {
             $uform = UserForm::getUserForm()->getForm($_POST);
             if ($_POST) $uform->isValid();
-            $uform->render(array('staff' => false, 'mode' => 'create'));
+            // $uform->render(array('staff' => false, 'mode' => 'create'));
+            ?>
+            <!-- Modern Registration/Login Style Fields: Two-Column Layout -->
+            <div class="modern-form-fields" style="display: flex; flex-direction: column;  margin-top: 2px;">
+              <div class="form-row" style="display: flex; gap: 12px;">
+                <div class="form-group" style="flex: 1;">
+                  <label for="name" class="form-label">Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" value="<?php echo Format::htmlchars($info['name']); ?>" required
+                    class="form-control" autocomplete="name">
+                  <?php if ($errors['name']) { ?>
+                    <div class="form-error"><?php echo $errors['name']; ?></div>
+                  <?php } ?>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                  <label for="email" class="form-label">Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" value="<?php echo Format::htmlchars($info['email']); ?>" required
+                    class="form-control" autocomplete="email">
+                  <?php if ($errors['email']) { ?>
+                    <div class="form-error"><?php echo $errors['email']; ?></div>
+                  <?php } ?>
+                </div>
+              </div>
+              <div class="form-row" style="display: flex; gap: 12px;">
+                <div class="form-group" style="flex: 1;">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="text" id="phone" name="phone" value="<?php echo Format::htmlchars($info['phone']); ?>"
+                    class="form-control" autocomplete="tel">
+                  <?php if ($errors['phone']) { ?>
+                    <div class="form-error"><?php echo $errors['phone']; ?></div>
+                  <?php } ?>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                  <label for="ext" class="form-label">Extension</label>
+                  <input type="text" id="ext" name="ext" value="<?php echo Format::htmlchars($info['ext']); ?>"
+                    class="form-control">
+                  <?php if ($errors['ext']) { ?>
+                    <div class="form-error"><?php echo $errors['ext']; ?></div>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
+            <?php
         }
         else { ?>
             <tr><td colspan="2"></td></tr>
@@ -64,7 +105,7 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
     </tbody>
     <tbody>
     <tr><td colspan="2" style="padding-top: 20px;">
-        <div style="font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 10px;">
+        <div style="font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 8px;">
         <?php echo __('Help Topic'); ?>
         </div>
     </td></tr>
