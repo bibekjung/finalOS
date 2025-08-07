@@ -42,7 +42,7 @@ define('ADMIN_EMAIL','kafleashraya@gmail.com');
 define('DBTYPE','mysql');
 #  DBHOST can have comma separated hosts (e.g db1:6033,db2:6033)
 define('DBHOST','localhost');
-define('DBNAME','osticket');
+define('DBNAME','osticket_new');
 define('DBUSER','root');
 define('DBPASS','admin123');
 
