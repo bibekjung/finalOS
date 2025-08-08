@@ -43,7 +43,6 @@
     }
 
     .card {
-      background: #fafafa;
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 20px;
@@ -107,6 +106,87 @@
     .form-actions input:hover {
       background: #ddd;
     }
+
+   .contactcard {
+    border-radius: 8px;
+     border: 1px solid #ddd;
+    padding: 20px;
+    background: white;
+    max-width: 500px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  .contactcard h3 {
+      margin-top: 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.contactcard label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.contactcard input[type="email"],
+.contactcard input[type="text"],
+.contactcard input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.contactcard input[type="email"]:focus,
+.contactcard input[type="text"]:focus,
+.contactcard input[type="tel"]:focus {
+     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.phone-container {
+    display: flex;
+    gap: 10px;
+}
+
+.country-code {
+    width: 80px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.phone-number {
+    flex: 1;
+    text-align: left;
+}
+
+.required {
+    color: #000000ff;
+}
+
+  
   </style>
 </head>
 <body>
@@ -122,7 +202,7 @@
 
     <div class="card-grid">
       <!-- Contact Information -->
-      <div class="card">
+      <div class="contactcard">
         <?php
         foreach ($user->getForms() as $f) {
           $f->render(['staff' => false]);
@@ -197,11 +277,11 @@
       <?php } ?>
     </div>
 
-    <!-- Submit / Reset / Cancel -->
     <div class="form-actions">
-      <input type="submit" value="<?php echo __('Update'); ?>" />
-      <input type="reset" value="<?php echo __('Reset'); ?>" />
-      <input type="button" value="<?php echo __('Cancel'); ?>" onclick="window.location.href='index.php';" />
+    <input type="submit" value="<?php echo __('Update'); ?>" style="display: inline-block; margin-right: 10px; background-color: blue; color: white; border: none; padding: 6px 12px; cursor: pointer;" />
+<input type="reset" value="<?php echo __('Reset'); ?>" style="display: inline-block; margin-right: 10px; background-color: blue; color: white; border: none; padding: 6px 12px; cursor: pointer;" />
+<input type="button" value="<?php echo __('Cancel'); ?>" onclick="window.location.href='index.php';" style="display: inline-block; background-color: red; color: white; border: none; padding: 6px 12px; cursor: pointer;" />
+
     </div>
   </form>
 </div>
