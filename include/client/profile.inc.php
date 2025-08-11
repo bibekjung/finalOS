@@ -15,6 +15,14 @@
       background: #f2f2f2;
       color: #333;
     }
+    hr {
+    /* display: block; */
+    height: 1px;
+    border: 0;
+    /* border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; */
+}
 
     .profile-wrapper {
       max-width: 1200px;
@@ -131,12 +139,17 @@
 }
 
 .contactcard label {
-    display: block;
-    margin-bottom: 5px;
-    color: black;
-    font-weight: bold;
-    padding: 5px;
+  display: flex;           
+  align-items: center;     
+  margin-bottom: 2px;      
+  color: #000;            
+  font-weight: 600;       
+  padding: 4px 6px;        
+  font-size: 14px;  
+  gap: 10px;  
+  align-items: center;     
 }
+
 
 .contactcard input[type="email"],
 .contactcard input[type="text"],
