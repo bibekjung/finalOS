@@ -213,23 +213,20 @@ if ($thisclient && $thisclient->isGuest()
 
 
 
-.thread-entry .thread-body {
-    padding: 10px;
-    /* line-height: 1.6; */
-    color: #555;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    width: 100%;
-}
+ .thread-entry .thread-body {
+     padding: 10px;
+     color: #555;
+     border-radius: 4px;
+     margin-bottom: 10px;
+     width: 100%;
+ }
 
 
 
 .thread-entry.message .header {
-      padding: 10px;
-    /* line-height: 1.6; */
-    /* border-radius: 4px; */
-    margin-bottom: 10px;
-    width: 30%;
+    padding: 0;
+    margin: 0 0 6px 0;
+    width: auto;
 }
 
 /* .thread-entry:last-child {
@@ -245,27 +242,27 @@ if ($thisclient && $thisclient->isGuest()
 }
 
 .thread-entry.message {
-    border-left-color: #ffffffff;
+    border-left-color: transparent;
 }
 .thread-entry.message .header {
-    padding: 10px;
-    margin-left: 10px;
-    width: 30%;
+    padding: 0;
+    margin-left: 0;
+    width: auto;
 }
 
 .thread-entry.response .header {
-     padding: 10px;
-    margin-bottom: 10px;
-    width: 30%;
+    padding: 0;
+    margin: 0 0 6px 0;
+    width: auto;
 }
 
 .thread-entry.response {
-    border-left-color: #ffffffff;
+    border-left-color: transparent;
 }
 
 .thread-entry.response.avatar {
-    margin-right: 60px;
-    margin-left: 60px;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 #ticketThread {
@@ -275,13 +272,13 @@ if ($thisclient && $thisclient->isGuest()
     border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
-.thread-entry .body {
-  background: #ffffffff !important;
+ .thread-entry .body {
+  background: #ffffff !important;
   border-radius: 12px !important;
   margin-right: auto;
   max-width: 75%;
   box-shadow: none !important;
-}
+ }
 
 /* Client messages - slightly different background */
 .thread-entry.client-message .body {
@@ -296,10 +293,10 @@ if ($thisclient && $thisclient->isGuest()
     font-size: 10px;
 }
 /* Staff messages - clean white background */
-.thread-entry.staff-message .body {
+ .thread-entry.staff-message .body {
   background: #ffffff !important;
-  border: 1px solid #e0e0e0 !important;
-}
+  border: none !important;
+ }
 
 /* Clean avatar styling */
 .thread-entry .avatar,
