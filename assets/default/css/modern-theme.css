@@ -10,7 +10,6 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* background: linear-gradient(135deg, #8c8e98 0%, #9f99a5 100%); */
   min-height: 100vh;
 }
 
