@@ -137,13 +137,18 @@ $tickets->values(
 );
 
 ?>
+
 <div class="search well">
 <div class="flush-left">
-<form action="tickets.php" method="get" id="ticketSearchForm">
+    <div class="search-ticket">
+<form action="tickets.php" method="get" id="ticketSearchFormTickets">
+
+<div class="hello-ticket">
     <input type="hidden" name="a"  value="search">
     <input type="text" name="keywords" size="30" value="<?php echo Format::htmlchars($settings['keywords']); ?>">
     <input type="submit" value="<?php echo __('Search');?>">
-<div class="pull-right">
+
+    <div class="pull-right">
     <?php echo __('Help Topic'); ?>:
     <select name="topic_id" class="nowarn" onchange="javascript: this.form.submit(); ">
         <option value="">&mdash; <?php echo __('All Help Topics');?> &mdash;</option>
@@ -159,6 +164,8 @@ foreach (Topic::getHelpTopics(true) as $id=>$name) {
                 $thisclient->getNumTopicTickets($id)); ?></option>
 <?php } ?>
     </select>
+</div>
+</div>
 </div>
 </form>
 </div>
