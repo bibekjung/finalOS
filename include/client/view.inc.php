@@ -93,18 +93,33 @@ if ($thisclient && $thisclient->isGuest()
   margin-bottom: 25px;
 }
 
-.info-card {
+/* .info-card {
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   overflow: hidden;
   transition: all 0.3s ease;
-}
+} */
 
 .info-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
+
+.info-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.info-card.collapsed {
+  max-height: 40px; /* only show header */
+  padding: 0;       /* remove inner spacing */
+}
+
 
 .card-header {
       background: #e6e7e7;
@@ -877,18 +892,33 @@ foreach (AttachmentFile::objects()->filter(array(
 showImagesInline(<?php echo JsonDataEncoder::encode($urls); ?>);
 
 // Toggle card sections
+
+
 function toggleCard(header) {
-    const content = header.nextElementSibling;
-    const icon = header.querySelector('.toggle-icon');
-    
-    if (content.classList.contains('expanded')) {
-        content.classList.remove('expanded');
-        header.classList.add('collapsed');
-    } else {
-        content.classList.add('expanded');
-        header.classList.remove('collapsed');
-    }
+  const card = header.parentElement; 
+  const icon = header.querySelector('.toggle-icon');
+
+  if (card.classList.contains('collapsed')) {
+    card.classList.remove('collapsed');
+    icon.textContent = '▼'; 
+  } else {
+    card.classList.add('collapsed');
+    icon.textContent = '▲'; p
+  }
 }
+
+// function toggleCard(header) {
+//     const content = header.nextElementSibling;
+//     const icon = header.querySelector('.toggle-icon');
+    
+//     if (content.classList.contains('expanded')) {
+//         content.classList.remove('expanded');
+//         header.classList.add('collapsed');
+//     } else {
+//         content.classList.add('expanded');
+//         header.classList.remove('collapsed');
+//     }
+// }
 
 // Hook up Save Draft button to Redactor draft plugin
 (function() {
