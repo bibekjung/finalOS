@@ -18,7 +18,7 @@ $info = Format::htmlchars(($errors && $_POST) ? $_POST : $info);
 <div style="
     width: 100%;
     min-height: 600px;
-    background: #f5f5f5;
+    /* background: #f5f5f5; */
     /* padding: 5vh 5vw; */
     box-sizing: border-box;
     overflow-y: auto;
@@ -128,12 +128,18 @@ $info = Format::htmlchars(($errors && $_POST) ? $_POST : $info);
             <?php } ?>
 
             <!-- Buttons -->
-            <div style="margin-top: 30px; text-align: center;">
-                <input type="submit" value="<?php echo __('Register'); ?>"
-                    style="background-color: #4CAF50; color: white; padding: 5px 8px; font-size: 15px; border: none; border-radius: 6px; cursor: pointer; margin-right: 10px;" />
+            <div style="margin-top: 30px; text-align: center; color: rgb(255, 255, 255) !important;">
+                <?php if ($errors['err']) { ?>
+                    <div style="color: red; font-weight: bold; margin-bottom: 10px;">
+                        <?php echo $errors['err']; ?>
+                    </div>
+                <?php } ?>
+               <input type="submit" value="<?php echo __('Register'); ?>"
+       style="background-color: red; color: rgb(255, 255, 255); padding: 5px 8px; font-size: 15px; border: none; border-radius: 6px; cursor: pointer; margin-right: 10px;" />
+
                 <input type="button" value="<?php echo __('Cancel'); ?>"
                     onclick="window.location.href='index.php';"
-                    style="background-color: #f44336; color: white; padding: 5px 8px; font-size: 15px; border: none; border-radius: 6px; cursor: pointer;" />
+                    style="background-color: #61413eff; color: white; padding: 5px 8px; font-size: 15px; border: none; border-radius: 6px; cursor: pointer;" />
             </div>
         </form>
     </div>

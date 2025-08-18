@@ -1475,13 +1475,13 @@ img.avatar {
 }
 .thread-entry::after {
   content: "";
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
   display: block;
 }
 .thread-entry::before {
   content: "";
   display: block;
-  border-top: 2px solid white;
+  /* border-top: 2px solid white; */
 }
 #ticketThread::before {
   border-left: 2px dotted #ddd;
