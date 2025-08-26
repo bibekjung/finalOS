@@ -174,12 +174,25 @@ html, body {
   opacity: 0.7;
 }
 
+#nav li a.solution::before {
+  background-image: url('../images/icons/solution.png');
+}
+
+
 #nav li a.home::before {
   background-image: url('../images/icons/home.png');
 }
 
 #nav li a.kb::before {
   background-image: url('../images/icons/kb.png');
+}
+
+
+#nav li a.create::before {
+  background-image: url('../images/icons/create.png');
+}
+#nav li a.requestStatus::before {
+  background-image: url('../images/icons/requestStatus.png');
 }
 
 #nav li a.new::before {
