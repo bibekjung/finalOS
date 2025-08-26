@@ -122,6 +122,7 @@ class StaffNav {
                     'desc' => __('Users'), 'href' => 'users.php', 'title' => __('User Directory')
                 );
             }
+
             $this->tabs['tasks'] = array('desc'=>__('Tasks'), 'href'=>'tasks.php', 'title'=>__('Task Queue'));
             $this->tabs['tickets'] = array('desc'=>__('Tickets'),'href'=>'tickets.php','title'=>__('Ticket Queue'));
 
@@ -315,6 +316,7 @@ class UserNav {
             $navs = array();
             $user = $this->user;
             $navs['home']=array('desc'=>__('Support Center Home'),'href'=>'index.php','title'=>'');
+            
             if($cfg && $cfg->isKnowledgebaseEnabled())
                 $navs['kb']=array('desc'=>__('Knowledgebase'),'href'=>'kb/index.php','title'=>'');
 

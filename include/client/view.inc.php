@@ -484,7 +484,7 @@ if ($thisclient && $thisclient->isGuest()
 }
 
 .reply-form-content {
-  display: flex;
+  /* display: flex; */
   min-height: 400px;
 }
 
@@ -553,7 +553,8 @@ if ($thisclient && $thisclient->isGuest()
   text-align: center;
   background: #fff;
   margin-bottom: 15px;
-  min-height: 200px;
+  /* min-height: 70px; */
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -846,9 +847,9 @@ if ($thisclient && $thisclient->isGuest()
                   </div>
                   <div class="attachment-zone">
                       <div class="upload-icon">☁️</div>
-                      <div class="drag-text">Drop files here or click to upload</div>
+                      <!-- <div class="drag-text">Drop files here or click to upload</div> -->
                       <div class="attachment-text">
-                          <?php echo __('You specify the uploaded file\'s storage type by selecting it from the drop-down list. Files stored in \'Temporary Storage\' will be deleted once the ticket is closed. The option \'Keep the file\' means that the file will be retained after ticket closure. Virus samples and large files (>5MB) are always saved in temporary storage.'); ?>
+                          <!-- <?php echo __('You specify the uploaded file\'s storage type by selecting it from the drop-down list. Files stored in \'Temporary Storage\' will be deleted once the ticket is closed. The option \'Keep the file\' means that the file will be retained after ticket closure. Virus samples and large files (>5MB) are always saved in temporary storage.'); ?> -->
                       </div>
                       <?php
                       if ($messageField->isAttachmentsEnabled()) {
